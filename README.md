@@ -15,7 +15,7 @@ Scribblr is made in HTML5 using [Phaser 2 framework](https://phaser.io/) and [Te
 - **CNN-based Predictions**: Utilizes a CNN model for recognizing doodles and classifying them into one of several categories.
 - **Training Mode**: Players can further train the model using additional datasets.
 - **Sample Prediction Mode**: Displays how the model performs on a set of predefined sample images.
-The model was trained on a small subset of the [Quick Draw Dataset](https://quickdraw.withgoogle.com/data).
+- **Dataset**: The model was trained on a small subset of the [Quick Draw Dataset](https://quickdraw.withgoogle.com/data).
 
 ### Built With
 
