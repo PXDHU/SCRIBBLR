@@ -1,6 +1,6 @@
 # SCRIBBLR - A Deep Learning Online Drawing Game
 
-##About the Project
+## About the Project
 SCRIBBLR is a web-based game built using JavaScript and TensorFlow.js, which challenges players to draw various objects, while a Convolutional Neural Network (CNN) predicts what the drawing represents. It serves as both an engaging game and an educational project in deep learning and computer vision.
 Similar to [Quick, Draw](https://quickdraw.withgoogle.com/) by Google.
 >[!NOTE]
@@ -39,8 +39,8 @@ The project consists of three main components:
 - **UI** (`ui.js`): Handles the interface, including buttons for actions like training, testing, clearing the canvas, and displaying predictions.
 - **Main Logic** (`main.js`): Manages the game state and interaction between the CNN, UI, and player input.
 - **CNN Model** (`cnn.js`): A TensorFlow.js-based CNN model responsible for training and predicting the doodles.
-- **html**(`index.html`): Basic html page which serves as a frontend.
-- **painter**(`painter.js`): Interactive painter board which records the Doodles and serves as input image to the CNN model.
+- **HTML**(`index.html`): Basic html page which serves as a frontend.
+- **Painter**(`painter.js`): Interactive painter board which records the Doodles and serves as input image to the CNN model.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
