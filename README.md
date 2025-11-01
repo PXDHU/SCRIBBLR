@@ -95,7 +95,7 @@ You can start sketching any objects as mentioned in the status bar, and the mode
 
 ## Contact
 
-Your Name - Padmavasan B - padmavasan.contact@gmail.com
+Padmavasan B - padmavasan.contact@gmail.com
 
 
 Project Link: [https://github.com/PXDHU/SCRIBBLR](https://github.com/PXDHU/SCRIBBLR)
