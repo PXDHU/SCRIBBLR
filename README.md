@@ -1,5 +1,6 @@
 # [SCRIBBLR](https://scribblr-orcin.vercel.app/) - A Deep Learning Online Drawing Game
-[Visit site](https://scribblr-orcin.vercel.app/)
+
+# [Play Game here](https://scribblr-orcin.vercel.app/)
 
 ## About the Project
 SCRIBBLR is a web-based game built using JavaScript and TensorFlow.js, which challenges players to draw various objects, while a Convolutional Neural Network (CNN) predicts what the drawing represents. It serves as both an engaging game and an educational project in deep learning and computer vision.
