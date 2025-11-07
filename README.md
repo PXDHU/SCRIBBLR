@@ -4,7 +4,7 @@ A web-based interactive drawing game built using **TensorFlow.js** and **Phaser*
 
 ## 💻 Demo
 🎮 **Play the Game Here:** 
-👉[https://scribblr-kappa.vercel.app/](https://scribblr-orcin.vercel.app/)
+👉[https://scribblr-kappa.vercel.app/](https://scribblr-kappa.vercel.app/)
 
 ---
 ## 🌟 Features
