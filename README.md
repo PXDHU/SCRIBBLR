@@ -1,104 +1,119 @@
-# [SCRIBBLR](https://scribblr-orcin.vercel.app/) - A Deep Learning Online Drawing Game
+# 🖌️ SCRIBBLR — Deep Learning Online Drawing Game
 
-# [Play Game here](https://scribblr-orcin.vercel.app/)
+A web-based interactive drawing game built using **TensorFlow.js** and **Phaser**, where players sketch objects while a **Convolutional Neural Network (CNN)** predicts what they draw — inspired by [Quick, Draw!](https://quickdraw.withgoogle.com/) by Google.
 
-## About the Project
-SCRIBBLR is a web-based game built using JavaScript and TensorFlow.js, which challenges players to draw various objects, while a Convolutional Neural Network (CNN) predicts what the drawing represents. It serves as both an engaging game and an educational project in deep learning and computer vision.
-Similar to [Quick, Draw](https://quickdraw.withgoogle.com/) by Google.
->[!NOTE]
-> This is a demonstration project and is intended to showcase the methods that can be used to embed machine learning models directly inside website with the use of javascript
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 💻 Demo
+🎮 **Play the Game Here:** 
+👉[https://scribblr-kappa.vercel.app/](https://scribblr-orcin.vercel.app/)
 
+---
+## 🌟 Features
 
-## Features
+🎨 **Interactive Drawing Interface** — Draw freely on the canvas and see real-time predictions  
+🧠 **CNN-based Prediction Engine** — Predicts doodles using a trained deep learning model  
+📚 **Training Mode** — Train the CNN on additional datasets for better accuracy  
+🔍 **Sample Prediction Mode** — Test the model on predefined sample images  
+📊 **Dataset Integration** — Uses a subset of the [Quick Draw Dataset](https://quickdraw.withgoogle.com/data)  
+💡 **Educational & Fun** — Learn deep learning concepts through play  
 
-Scribblr is made in HTML5 using [Phaser 2 framework](https://phaser.io/) and [TensorFlow.js library](https://js.tensorflow.org/). 
-- **Interactive Drawing Interface**: Players can draw on a canvas and get real-time predictions of their doodles.
-- **CNN-based Predictions**: Utilizes a CNN model for recognizing doodles and classifying them into one of several categories.
-- **Training Mode**: Players can further train the model using additional datasets.
-- **Sample Prediction Mode**: Displays how the model performs on a set of predefined sample images.
-- **Dataset**: The model was trained on a small subset of the [Quick Draw Dataset](https://quickdraw.withgoogle.com/data).
+---
+## 🧱 Technology Stack
 
-### Built With
+| Component | Technology |
+|------------|-------------|
+| **Frontend Framework** | HTML5, Phaser 2 |
+| **AI/ML** | TensorFlow.js |
+| **Dataset** | Quick Draw Dataset |
+| **Game Logic** | JavaScript |
+| **Visualization** | Canvas-based Drawing Board |
 
-* [HTML5](https://html.com/)
-* [Phaser 2](https://phaser.io/)
-* [TensorFlow.js](https://js.tensorflow.org/)
-* [Quick Draw Dataset](https://quickdraw.withgoogle.com/data)
+---
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 📋 Prerequisites
 
-## How It Works
+- Web browser with JavaScript support  
+- [VS Code](https://code.visualstudio.com/) with **Live Server** extension (recommended)  
+- Internet connection to fetch dataset and libraries  
 
-1. **Dataset Loading**: The application uses a set of predefined datasets (`bee`, `octopus`, `tree`, `candle`, `clock`, `guitar`, `umbrella`).
-2. **CNN Training**: A simple CNN model is trained using the datasets, with options for additional training.
-3. **Prediction**: Once trained, the CNN predicts the player’s doodles and provides feedback on the canvas.
+---
+## 🚀 Quick Start
 
-### Architecture
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/PXDHU/SCRIBBLR.git
+cd SCRIBBLR
+```
 
-The project consists of three main components:
+### 2️⃣ Open in VS Code
+```bash
+code SCRIBBLR
+```
 
-- **UI** (`ui.js`): Handles the interface, including buttons for actions like training, testing, clearing the canvas, and displaying predictions.
-- **Main Logic** (`main.js`): Manages the game state and interaction between the CNN, UI, and player input.
-- **CNN Model** (`cnn.js`): A TensorFlow.js-based CNN model responsible for training and predicting the doodles.
-- **HTML**(`index.html`): Basic html page which serves as a frontend.
-- **Painter**(`painter.js`): Interactive painter board which records the Doodles and serves as input image to the CNN model.
+### 3️⃣ Run the Application
+- Open `index.html`
+- Use Live Server to run locally
+- Start drawing and watch the CNN predictions in real-time!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
+## 📁 Project Structure
+```
+SCRIBBLR/
+├── index.html              # Main HTML frontend
+├── main.js                 # Core game logic
+├── ui.js                   # UI interactions (buttons, controls)
+├── cnn.js                  # CNN model definition and training
+├── painter.js              # Drawing canvas and input capture
+├── assets/                 # Images, datasets, and resources
+└── README.md               # Documentation
+```
 
+---
+## 🧠 How It Works
 
-## Roadmap
+1. Dataset Loading
+   Predefined doodle datasets (e.g., bee, tree, clock, etc.) are loaded into the browser.
+2. Model Training
+   A simple Convolutional Neural Network (CNN) is trained directly in the browser using TensorFlow.js.
+3. Prediction Mode
+   The trained model classifies the player’s doodles and displays real-time predictions.
+4. Training Mode
+   Players can further train the model to improve performance on new sketches.
 
-- [ ] Adding more drawing categories from the [Quick Draw Dataset](https://quickdraw.withgoogle.com/data).
+---
+##  ⚙️ Architecture
+The system is divided into 5 main components:
+| Component | Description |
+|------------|-------------|
+| **UI (ui.js)** | Handles game interface, buttons, and visual feedback |
+| **Main Logic (main.js)** | Manages game state and integrates components |
+| **CNN Model (cnn.js)** | Defines, trains, and predicts using a CNN |
+| **Painter (painter.js)** | Provides the interactive sketching canvas |
+| **Frontend (index.html)** | Basic HTML structure connecting all scripts |
 
-- [ ] Tune Model Architecture for more accuracy.
+---
+## 📈 Roadmap
+- Add more drawing categories from Quick Draw Dataset
+- Tune CNN architecture for improved accuracy
+- Multiplayer game mode
+- User authentication and leaderboard
+- Create rooms to compete with friends
+- Enhanced and responsive UI
 
-- [ ] Multiplayer game support
+---
+## 🤝 Contributing
 
-- [ ] Enhance the UI
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-- [ ] Authentication
+---
+## 👨‍💻 Author
 
-- [ ] Create rooms and compete with friends to see who can accurately draw an object that the model can identify first.
+**Padmavasan Balakrishnan**
+- Email: padmavasan.contact@gmail.com
+- GitHub: [@PXDHU](https://github.com/PXDHU)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/PXDHU/SCRIBBLR.git
-   ```
-2. Open the cloned folder in VS Code
-   ```sh
-   code SCRIBBLR
-   ```
-3. Use the VS Code Live Server Extension to run the website locally on your machine.
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Usage
-
-Once the game is initialized and training is completed, The left table will show the samples from the dataset and the models prediction. 
-
-The wrong predictions will be marked 'Red' and correct predictions will be marked 'Green'. 
-
-You can test with more samples by clicking on 'Next Test' Button.
-
-Initially, The model is trained for 50 epochs. If you are not satisfied with the model predictions, You can train the model more by clicking the 'Train More' Button.
-
-You can start sketching any objects as mentioned in the status bar, and the model will predict your drawing.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## Contact
-
-Padmavasan B - padmavasan.contact@gmail.com
-
-
-Project Link: [https://github.com/PXDHU/SCRIBBLR](https://github.com/PXDHU/SCRIBBLR)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
+⭐️ Star this repository if you find it helpful!
