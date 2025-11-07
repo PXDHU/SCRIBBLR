@@ -7,14 +7,115 @@
 		<meta name="application-name" content="Scribblr" />
 			
 		<title>Scribblr</title>
-		<style>body {margin: 0; background: #000; overflow: hidden}</style>
-		<script src = "..\libs\phaser.min.js"></script>
-		<script src = "..\libs\tensorflow.js"></script>
-		<script src = "main.js"></script>
-		<script src = "ui.js"></script>
-		<script src = "cnn.js"></script>
-		<script src = "painter.js"></script>
+
+		<!-- Base styles -->
+		<style>
+			* { box-sizing: border-box; }
+			html, body { 
+				height: 100%; 
+				margin: 0; 
+				overflow: hidden; 
+				font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+			}
+
+			/* Clean uniform light background */
+			body {
+				background: #ffb8b8;
+				color: #111;
+				overflow: hidden;
+			}
+		</style>
+
+		<!-- Core Scripts -->
+		<script src="libs/phaser.min.js"></script>
+		<script src="libs/tensorflow.js"></script>
+		<script src="main.js"></script>
+		<script src="ui.js"></script>
+		<script src="cnn.js"></script>
+		<script src="painter.js"></script>
+
+		<!-- ─────────── Scribblr UI Header ─────────── -->
+		<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			const header = document.createElement('div'); 
+			header.id = 'hudHeader';
+
+			const brand = document.createElement('div'); 
+			brand.className = 'brand';
+
+			const logo = document.createElement('div'); 
+			logo.className = 'logo'; 
+
+			const logoImg = document.createElement('img');
+			logoImg.src = 'assets/logo.png'; // ✅ path to your logo
+			logoImg.alt = 'Scribblr Logo';
+			logoImg.className = 'logo-img';
+
+			logo.appendChild(logoImg);
+
+			const title = document.createElement('div'); 
+			title.innerHTML = `
+				<div class="title">Scribblr</div>
+				<div class="subtitle">Draw • Train • Guess</div>
+			`;
+
+			brand.appendChild(logo); 
+			brand.appendChild(title);
+			header.appendChild(brand);
+			document.body.appendChild(header);
+		});
+		</script>
+
+		<!-- Header styles -->
+		<style>
+			#hudHeader {
+				position: fixed;
+				left: 24px;
+				top: 20px;
+				z-index: 2000;
+				display: flex;
+				align-items: center;
+				gap: 14px;
+				user-select: none;
+			}
+			.brand {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+			}
+			.logo {
+				width: 86px;
+				height: 86px;
+				border-radius: 18px;
+				background: linear-gradient(180deg, #ff7ab6, #ffde59);
+				box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2), 0 0 18px rgba(255, 122, 182, 0.25);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 10px;
+			}
+
+			.logo-img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				border-radius: 12px;
+			}
+
+			.title {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 1;
+				color: #111;
+				text-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+			}
+			.subtitle {
+				font-size: 13px;
+				color: #444;
+				opacity: 0.8;
+			}
+		</style>
 	</head>
-	<body>
-	</body>
+
+	<body></body>
 </html>

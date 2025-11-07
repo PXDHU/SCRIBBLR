@@ -33,14 +33,14 @@ App.MainState = function(){
 App.MainState.prototype = {
 	
 	preload : function(){
-		this.game.load.image('imgBack', '../assets/img_back.png');
-		this.game.load.image('imgDisable', '../assets/img_disable.png');
+		//this.game.load.image('imgBack', 'assets/img_back.png');
+		this.game.load.image('imgDisable', 'assets/img_disable.png');
 		
-		this.game.load.image('btnTrain', '../assets/btn_train.png');
-		this.game.load.image('btnTest', '../assets/btn_test.png');
-		this.game.load.image('btnClear', '../assets/btn_clear.png');
+		this.game.load.image('btnTrain', 'assets/btn_train.png');
+		this.game.load.image('btnTest', 'assets/btn_test.png');
+		this.game.load.image('btnClear', 'assets/btn_clear.png');
 		
-		this.load.bitmapFont('fntBlackChars', '../assets/fnt_black_chars.png', '../assets/fnt_black_chars.fnt');
+		this.load.bitmapFont('fntBlackChars', 'assets/fnt_black_chars.png', 'assets/fnt_black_chars.fnt');
 	},
 	
 	
@@ -52,7 +52,11 @@ App.MainState.prototype = {
 		this.game.stage.disableVisibilityChange = true;
 
 		// background
-		this.game.add.sprite(0, 0, 'imgBack');
+		this.game.stage.backgroundColor = "#ffb8b8";
+
+
+
+
 		
 		// loader for loading datasets
 		this.loader = new Phaser.Loader(this.game);
@@ -84,7 +88,7 @@ App.MainState.prototype = {
 				var fileName = App.DATASETS[this.dataset] + '.bin';
 				
 				this.loader.reset();
-				this.loader.binary('input_file', '../data/'+fileName);
+				this.loader.binary('input_file', 'data/' + fileName);
 				this.loader.start();
 				
 				this.ui.showStatusBar("Loading " + fileName + " file.");
